@@ -93,7 +93,7 @@
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <service name="WebShopMainService">
     	<port name="WebShopMainPort" binding="tns:WebShopMainBinding">
-    		<soap:address location="http://localhost:8080/WebShopMain" />
+    		<soap:address location="http://localhost:8080/ode/processes/WebShopMain" />
     	</port>
     </service>
 </definitions>
