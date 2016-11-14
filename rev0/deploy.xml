@@ -10,7 +10,7 @@
     <provide partnerLink="client">
       <service name="pns:WebShopMainService" port="WebShopMainPort"/>
     </provide>
-    <invoke partnerLink="ListItemsPartner">
+    <invoke partnerLink="InventoryServicePartner">
       <service name="FlowSOG:InventoryService" port="InventoryPort"/>
     </invoke>
   </process>

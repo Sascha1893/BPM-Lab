@@ -17,7 +17,7 @@
             <element name="WebShopMainRequest">
                 <complexType>
                     <sequence>
-                        <element name="input" type="string"/>
+                        <element name="input" type="int"/>
                     </sequence>
                 </complexType>
             </element>
