@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:pns="http://de.ustutt.simtech">
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:FlowSOG="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:pns="http://de.ustutt.simtech">
   <process name="pns:WebShopMain">
     <metaData>
       <mdProperty name="version" value="1"/>
     </metaData>
     <active>true</active>
     <retired>false</retired>
+    <process-events generate="all"/>
     <provide partnerLink="client">
       <service name="pns:WebShopMainService" port="WebShopMainPort"/>
     </provide>
+    <invoke partnerLink="ListItemsPartner">
+      <service name="FlowSOG:InventoryService" port="InventoryPort"/>
+    </invoke>
   </process>
 </deploy>
