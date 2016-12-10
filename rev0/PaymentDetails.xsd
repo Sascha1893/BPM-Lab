@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OrderedProducts"
+	xmlns:tns="http://www.example.org/OrderedProducts" elementFormDefault="qualified">
+
+
+	<element name="paymentDetails">
+		<complexType>
+			<sequence>
+				<element name="bankName" type="string" />
+				<element name="bankAddress" type="string" />
+				<element name="accountNumber" type="int" />
+				<element name="accountHolderName" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+
+
+</schema>
+
+
+
+<!-- XSD für Lieferadresse -->
+ 

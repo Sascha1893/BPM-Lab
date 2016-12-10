@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OrderedProducts"
+	xmlns:tns="http://www.example.org/OrderedProducts" elementFormDefault="qualified">
+
+
+	<element name="shippingAddress">
+		<complexType>
+			<sequence>
+				<element name="street"  type="string"/>
+				<element name="streetNumber" type= "int"/>
+				<element name="plz"  type="string"/>
+				<element name="city"  type="string"/>
+				<element name="country"  type="string" minOccurs="0"/>
+			</sequence>
+		</complexType>
+	</element>
+
+
+</schema>
+
+
+
+<!-- XSD für Lieferadresse -->
+ 

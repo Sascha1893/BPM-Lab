@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://de.ustutt.simtech/OrderedProducts"
+	xmlns:tns="http://de.ustutt.simtech/OrderedProducts" elementFormDefault="qualified">
+
+
+	<element name="orderedProducts">
+		<complexType>
+			<sequence>
+				<element name="productID"  type="string"/>
+				<element name="numberOfItems" type= "int"/>
+			</sequence>
+		</complexType>
+	</element>
+
+
+</schema>
+
+
+
+<!-- XSD für bestellte Produkte -->
+ 

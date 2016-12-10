@@ -12,6 +12,9 @@
     </provide>
     <invoke partnerLink="InventoryServicePartner">
       <service name="FlowSOG:InventoryService" port="InventoryPort"/>
+        </invoke>
+     <invoke partnerLink="OrderServierPartner">
+      <service name="FlowSOG:OrderService" port="OrderPort"/>
     </invoke>
   </process>
 </deploy>
