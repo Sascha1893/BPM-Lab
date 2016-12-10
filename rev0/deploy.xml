@@ -13,7 +13,7 @@
     <invoke partnerLink="InventoryServicePartner">
       <service name="FlowSOG:InventoryService" port="InventoryPort"/>
         </invoke>
-     <invoke partnerLink="OrderServierPartner">
+     <invoke partnerLink="OrderPartner">
       <service name="FlowSOG:OrderService" port="OrderPort"/>
     </invoke>
   </process>
