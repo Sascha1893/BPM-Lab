@@ -5,5 +5,8 @@
     <breakpoint name="" targetXPath="/process/sequence[1]/forEach[1]" targetName="ForEach"/>
     <breakpoint name="" targetXPath="/process/sequence[1]" targetName="main"/>
     <breakpoint name="" targetXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]"/>
+    <breakpoint name="" targetXPath="/process/sequence[1]/assign[4]" targetName="AssignToStoreOrder"/>
+    <breakpoint name="" targetXPath="/process/sequence[1]/assign[3]" targetName="Assign"/>
+    <breakpoint name="" targetXPath="/process/sequence[1]/invoke[2]" targetName="InvokeStoreOrder"/>
   </localBreakpoints>
 </bpdb:Debug>

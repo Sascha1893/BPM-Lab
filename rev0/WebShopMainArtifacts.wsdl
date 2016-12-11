@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://de.ustutt.simtech" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" name="WebShopMain" targetNamespace="http://de.ustutt.simtech">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://de.ustutt.simtech" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
+	xmlns:wsdl="http://iaas.uni-stuttgart.de/labs/FlowSOG" name="WebShopMain"
+	targetNamespace="http://de.ustutt.simtech" >
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 		TYPE DEFINITION - List of types participating in this BPEL process The BPEL 
@@ -7,24 +11,23 @@
 		or import any XML Schema type and use them as part of the message types. 
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<plnk:partnerLinkType name="ListItemsPartner">
-		<plnk:role name="admin" portType="wsdl:InventoryPortType"/>
+		<plnk:role name="admin" portType="wsdl:InventoryPortType" />
 	</plnk:partnerLinkType>
-    <plnk:partnerLinkType name="OrderPartner">
-    <plnk:role name="admin" portType="wsdl:OrderPortType"/>
-  </plnk:partnerLinkType>
-    <import location="BPMLabServices.wsdl" namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG"/>
-    <types>
-		<schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://de.ustutt.simtech">
+	<plnk:partnerLinkType name="OrderPartner">
+		<plnk:role name="admin" portType="wsdl:OrderPortType" />
+	</plnk:partnerLinkType>
+	<import location="BPMLabServices.wsdl" namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG" />
+	<types>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://de.ustutt.simtech" >
 
 
 
 			<element name="WebShopMainRequest">
 				<complexType>
 					<sequence>
-						<element name="products" type="tns:products"/>
-						<element name="paymentDetails" type="tns:paymentDetails"/>
-						<element name="shippingAddress" type="string"/>
-						<element name="customerID" type="string"/>
+						<element name="inputOrder" type="tns:inputOrder" />
 					</sequence>
 				</complexType>
 			</element>
@@ -34,9 +37,9 @@
 			<element name="WebShopMainResponse">
 				<complexType>
 					<sequence>
-						<element name="products" type="tns:products"/>
-						<element name="paymentDetails" type="tns:paymentDetails"/>
-						<element name="shippingAddress" type="string"/>
+						<element name="products" type="tns:products" />
+						<element name="paymentDetails" type="tns:paymentDetails" />
+						<element name="shippingAddress" type="string" />
 					</sequence>
 				</complexType>
 			</element>
@@ -45,10 +48,19 @@
 
 			<!-- XSDs für den Input -->
 
-			<complexType name="products">
 
+			<complexType name="inputOrder">
 				<sequence>
-					<element maxOccurs="unbounded" name="product" type="tns:product"/>
+					<element name="products" type="tns:products" />
+					<element name="paymentDetails" type="tns:paymentDetails" />
+					<element name="shippingAddress" type="string" />
+					<element name="customerID" type="string" />
+				</sequence>
+			</complexType>
+
+			<complexType name="products">
+				<sequence>
+					<element maxOccurs="unbounded" name="product" type="tns:product" />
 				</sequence>
 			</complexType>
 
@@ -56,8 +68,8 @@
 
 			<complexType name="product">
 				<sequence>
-					<element name="productID" type="string"/>
-					<element name="numberOfItems" type="int"/>
+					<element name="productID" type="string" />
+					<element name="numberOfItems" type="int" />
 				</sequence>
 			</complexType>
 
@@ -66,10 +78,10 @@
 
 			<complexType name="paymentDetails">
 				<sequence>
-					<element name="bankName" type="string"/>
-					<element name="bankAddress" type="string"/>
-					<element name="accountNumber" type="int"/>
-					<element name="accountHolderName" type="string"/>
+					<element name="bankName" type="string" />
+					<element name="bankAddress" type="string" />
+					<element name="accountNumber" type="int" />
+					<element name="accountHolderName" type="string" />
 				</sequence>
 			</complexType>
 
@@ -85,10 +97,10 @@
 		MESSAGE TYPE DEFINITION - Definition of the message types used as part of 
 		the port type defintions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<message name="WebShopMainRequestMessage">
-		<part element="tns:WebShopMainRequest" name="payload"/>
+		<part element="tns:WebShopMainRequest" name="payload" />
 	</message>
 	<message name="WebShopMainResponseMessage">
-		<part element="tns:WebShopMainResponse" name="payload"/>
+		<part element="tns:WebShopMainResponse" name="payload" />
 	</message>
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -98,14 +110,14 @@
 	<!-- portType implemented by the WebShopMain BPEL process -->
 	<portType name="WebShopMain">
 		<operation name="process">
-			<input message="tns:WebShopMainRequestMessage"/>
-			<output message="tns:WebShopMainResponseMessage"/>
+			<input message="tns:WebShopMainRequestMessage" />
+			<output message="tns:WebShopMainResponseMessage" />
 		</operation>
 	</portType>
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 		PARTNER LINK TYPE DEFINITION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<plnk:partnerLinkType name="WebShopMain">
-		<plnk:role name="WebShopMainProvider" portType="tns:WebShopMain"/>
+		<plnk:role name="WebShopMainProvider" portType="tns:WebShopMain" />
 	</plnk:partnerLinkType>
 
 
@@ -113,14 +125,15 @@
 		BINDING DEFINITION - Defines the message format and protocol details for 
 		a web service. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<binding name="WebShopMainBinding" type="tns:WebShopMain">
-		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
 		<operation name="process">
-			<soap:operation soapAction="http://de.ustutt.simtech/process"/>
+			<soap:operation soapAction="http://de.ustutt.simtech/process" />
 			<input>
-				<soap:body use="literal"/>
+				<soap:body use="literal" />
 			</input>
 			<output>
-				<soap:body use="literal"/>
+				<soap:body use="literal" />
 			</output>
 		</operation>
 	</binding>
@@ -130,7 +143,7 @@
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<service name="WebShopMainService">
 		<port binding="tns:WebShopMainBinding" name="WebShopMainPort">
-			<soap:address location="http://localhost:8080/ode/processes/WebShopMain"/>
+			<soap:address location="http://localhost:8080/ode/processes/WebShopMain" />
 		</port>
 	</service>
 
