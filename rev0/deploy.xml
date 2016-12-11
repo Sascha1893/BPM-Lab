@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03"
-	xmlns:FlowSOG="http://iaas.uni-stuttgart.de/labs/FlowSOG">
-	<process name="FlowSOG:WebShopMain">
-		<metaData>
-			<mdProperty name="value" value="1" />
-		</metaData>
-		<active>true</active>
-		<retired>false</retired>
-		<process-events generate="all" />
-		<provide partnerLink="client">
-			<service name="FlowSOG:WebShopMainService" port="WebShopMainPort" />
-		</provide>
-		<invoke partnerLink="client">
-			<service name="FlowSOG:WebShopMainService" port="WebShopMainPort" />
-		</invoke>
-		<invoke partnerLink="InventoryServicePartner">
-			<service name="FlowSOG:InventoryService" port="InventoryPort" />
-		</invoke>
-		<invoke partnerLink="OrderServicePartner">
-			<service name="FlowSOG:OrderService" port="OrderPort" />
-		</invoke>
-		<invoke partnerLink="ShipmentServicePartner">
-			<service name="FlowSOG:ShipmentService" port="ShipmentPort" />
-		</invoke>
-		<invoke partnerLink="PaymentServicePartner">
-			<service name="FlowSOG:PaymentService" port="PaymentPort" />
-		</invoke>
-	</process>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:pns="http://iaas.uni-stuttgart.de/labs/FlowSOG">
+  <process name="pns:WebShopMain">
+    <metaData>
+      <mdProperty name="value" value="1"/>
+    </metaData>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="pns:WebShopMainService" port="WebShopMainPort"/>
+    </provide>
+    <invoke partnerLink="client">
+      <service name="pns:WebShopMainService" port="WebShopMainPort"/>
+    </invoke>
+    <invoke partnerLink="InventoryServicePartner">
+      <service name="pns:InventoryService" port="InventoryPort"/>
+    </invoke>
+    <invoke partnerLink="OrderServicePartner">
+      <service name="pns:OrderService" port="OrderPort"/>
+    </invoke>
+    <invoke partnerLink="ShipmentServicePartner">
+      <service name="pns:ShipmentService" port="ShipmentPort"/>
+    </invoke>
+    <invoke partnerLink="PaymentServicePartner">
+      <service name="pns:PaymentService" port="PaymentPort"/>
+    </invoke>
+  </process>
 </deploy>

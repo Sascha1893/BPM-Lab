@@ -5,10 +5,11 @@
          suppressJoinFailure="yes"
          xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG"
          xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
-         xmlns:ns="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:ns1="http://www.w3.org/2001/XMLSchema">
+         xmlns:ns="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:ns1="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://iaas.uni-stuttgart.de/labs/FlowSOG/Customer">
 
     <!-- Import the client WSDL -->
     
+    <bpel:import namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG/Customer" location="CustomerArtifacts.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
     <bpel:import namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG" location="WebShopMainArtifacts.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
     <bpel:import namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG" location="BPMLabServices.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
     
@@ -30,6 +31,8 @@
         <bpel:partnerLink name="OrderServicePartner" partnerLinkType="tns:OrderServicePartner" partnerRole="OrderProvider"></bpel:partnerLink>
         <bpel:partnerLink name="ShipmentServicePartner" partnerLinkType="tns:ShipmentServicePartner" partnerRole="ShipmentProvider"></bpel:partnerLink>
         <bpel:partnerLink name="PaymentServicePartner" partnerLinkType="tns:PaymentServicePartner" partnerRole="PaymentProvider"></bpel:partnerLink>
+        
+        
     </bpel:partnerLinks>
   
     <!-- ================================================================= -->         
@@ -75,6 +78,8 @@
         <bpel:variable name="PaymentServicePartnerRequest1" messageType="tns:conductPaymentInput"></bpel:variable>
         <bpel:variable name="ShipmentServicePartnerResponse1" messageType="tns:shipProductsOutput"></bpel:variable>
         <bpel:variable name="ShipmentServicePartnerRequest1" messageType="tns:shipProductsInput"></bpel:variable>
+        
+        
     </bpel:variables>
 
     <!-- ================================================================= -->         
@@ -112,26 +117,14 @@
             
             
             
-            <bpel:copy>
-                <bpel:from><bpel:literal><tns:WebShopMainResponse xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <tns:products>
-    <tns:product>
-      <tns:productId>tns:productId</tns:productId>
-      <tns:numberOfItems>0</tns:numberOfItems>
-    </tns:product>
-  </tns:products>
-  <tns:paymentDetails>
-    <tns:bankName>tns:bankName</tns:bankName>
-    <tns:bankAddress>tns:bankAddress</tns:bankAddress>
-    <tns:accountNumber>0</tns:accountNumber>
-    <tns:accountHolderName>tns:accountHolderName</tns:accountHolderName>
-  </tns:paymentDetails>
-  <tns:shippingAddress>tns:shippingAddress</tns:shippingAddress>
-</tns:WebShopMainResponse>
-</bpel:literal></bpel:from>
-                <bpel:to variable="outputOrder" part="payload"></bpel:to>
-            </bpel:copy>
             
+            
+            <bpel:copy>
+                <bpel:from>
+                    <bpel:literal xml:space="preserve"><![CDATA[]]></bpel:literal>
+                </bpel:from>
+                <bpel:to part="payload" variable="outputOrder"></bpel:to>
+            </bpel:copy>
         </bpel:assign>
         
         
@@ -204,24 +197,45 @@
                             
                             
                             <bpel:assign validate="no" name="AssignStatusProductNichtVorhanden">
+                                
                                 <bpel:copy>
-                                    <bpel:from part="checkAvailabilityOutput" variable="CheckVorhandenResponse">
-                                        <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
-                                            <![CDATA[tns:product/tns:status/tns:currentAvailability]]>
-                                        </bpel:query>
+                                    <bpel:from><bpel:literal><tns:WebShopMainResponse xmlns:tns="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tns:outputOrder>tns:outputOrder</tns:outputOrder>
+</tns:WebShopMainResponse>
+</bpel:literal></bpel:from>
+                                    <bpel:to variable="outputOrder" part="payload"></bpel:to>
+                                </bpel:copy>
+                                <bpel:copy>
+                                    <bpel:from>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <![CDATA[concat('Product ',string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:name),' is not available. It will be available again in ', string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:status/tns:availableAgainInDays),' Days')]]>
                                     </bpel:from>
                                     <bpel:to part="payload" variable="outputOrder">
                                         <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
-                                            <![CDATA[tns:products/tns:product[1]/tns:productId]]>
+                                            <![CDATA[tns:outputOrder]]>
                                         </bpel:query>
                                     </bpel:to>
                                 </bpel:copy>
+                                
+                                
                             </bpel:assign>
+                            
+                            
+                            
                             <bpel:reply name="replyCustomer" partnerLink="client" operation="process" portType="tns:WebShopMain" variable="outputOrder"></bpel:reply>
                             
+                            <bpel:exit name="Exit"></bpel:exit>
                         </bpel:sequence>
                     </bpel:if>
                 </bpel:sequence>
+               
             </bpel:scope>
         </bpel:forEach>
         
@@ -247,7 +261,6 @@
             
             <bpel:copy>
                 <bpel:from><bpel:literal xml:space="preserve"><FlowSOG:storeOrderDetails xmlns:FlowSOG="http://iaas.uni-stuttgart.de/labs/FlowSOG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <FlowSOG:orderId>55</FlowSOG:orderId>
   <FlowSOG:customerId>sasa</FlowSOG:customerId>
   <FlowSOG:products>
     <FlowSOG:product>

@@ -18,7 +18,7 @@
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481464108040" processName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}WebShopMain" processVersion="16"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481469301744" processName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}WebShopMain" processVersion="4"/>
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@variables/@children.2"/>
@@ -122,10 +122,6 @@
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@activity/@activities.4/@copy.3"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
-  </extensions>
-  <extensions>
-    <extendedObject href="WebShopMain.bpel#//@activity/@activities.1/@copy.0"/>
     <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
   </extensions>
   <extensions>
@@ -255,6 +251,18 @@
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity/@activities.1"/>
     <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity/@activities.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="WebShopMain.bpel#//@activity/@activities.1/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity/@activities.0/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity/@activities.0"/>
