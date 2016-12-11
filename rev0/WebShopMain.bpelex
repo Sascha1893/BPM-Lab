@@ -18,7 +18,7 @@
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481471426852" processName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}WebShopMain" processVersion="13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481484773939" processName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}WebShopMain" processVersion="1"/>
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@variables/@children.2"/>
@@ -278,6 +278,10 @@
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@activity/@activities.13/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@copy.4"/>
     <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
   </extensions>
 </extensionmodel:ExtensionMap>

@@ -95,7 +95,7 @@
 				<sequence>
 					<element name="bankName" type="string" />
 					<element name="bankAddress" type="string" />
-					<element name="accountNumber" type="int" />
+					<element name="accountNumber" type="string" />
 					<element name="accountHolderName" type="string" />
 				</sequence>
 			</complexType>
