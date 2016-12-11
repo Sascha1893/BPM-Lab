@@ -18,7 +18,7 @@
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481462635800" processName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}WebShopMain" processVersion="15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481464108040" processName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}WebShopMain" processVersion="16"/>
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@variables/@children.2"/>
@@ -78,10 +78,6 @@
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
-  </extensions>
-  <extensions>
-    <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity/@activities.0"/>
     <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
   </extensions>
   <extensions>
@@ -254,6 +250,18 @@
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@activity/@activities.14/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="WebShopMain.bpel#//@activity/@activities.3/@activity/@activity/@activities.2/@activity/@activities.0/@copy.0"/>
     <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
   </extensions>
 </extensionmodel:ExtensionMap>

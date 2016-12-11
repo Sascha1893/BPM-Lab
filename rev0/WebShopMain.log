@@ -11224,4 +11224,168 @@
     <parentElement elementType="sequence" elementName="main" elementXPath="/process/sequence[1]"/>
     <oldElement elementType="invoke" elementName="InvokeListProducts" elementXPath="/process/sequence[1]/invoke[1]"/>
   </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T14:32:47.890+0100">
+    <parentElement elementType="sequence" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]"/>
+    <newElement elementType="exit" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/exit[1]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:32:47.894+0100">
+    <containingElement elementType="exit" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/exit[1]"/>
+    <attribute attributeName="name" oldValue="" newValue="Exit"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementRemoved" timestamp="2016-12-11T14:32:59.711+0100">
+    <parentElement elementType="sequence" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]"/>
+    <oldElement elementType="throw" elementName="Throw" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/throw[1]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T14:33:07.516+0100">
+    <parentElement elementType="sequence" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]"/>
+    <newElement elementType="reply" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:07.519+0100">
+    <containingElement elementType="reply" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="name" oldValue="" newValue="Reply"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:18.341+0100">
+    <containingElement elementType="reply" elementName="Reply" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="name" oldValue="Reply" newValue="reply Customer"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:24.945+0100">
+    <containingElement elementType="reply" elementName="reply Customer" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="partnerLink" oldValue="" newValue="client"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:24.963+0100">
+    <containingElement elementType="reply" elementName="reply Customer" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="operation" oldValue="" newValue="process"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:24.981+0100">
+    <containingElement elementType="reply" elementName="reply Customer" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="operation" oldValue="process"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:24.988+0100">
+    <containingElement elementType="reply" elementName="reply Customer" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="portType" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:26.830+0100">
+    <containingElement elementType="reply" elementName="reply Customer" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="operation" oldValue="" newValue="process"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:26.847+0100">
+    <containingElement elementType="reply" elementName="reply Customer" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="portType" oldValue="" newValue="tns:WebShopMain"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:26.859+0100">
+    <containingElement elementType="reply" elementName="reply Customer" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="variable" oldValue="" newValue="outputOrder"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:42.128+0100">
+    <containingElement elementType="reply" elementName="reply Customer" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/reply[1]"/>
+    <attribute attributeName="name" oldValue="reply Customer" newValue="replyCustomer"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T14:33:46.917+0100">
+    <parentElement elementType="sequence" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]"/>
+    <newElement elementType="assign" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:33:46.922+0100">
+    <containingElement elementType="assign" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]"/>
+    <attribute attributeName="name" oldValue="" newValue="Assign1"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:00.261+0100">
+    <containingElement elementType="assign" elementName="Assign1" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]"/>
+    <attribute attributeName="name" oldValue="Assign1" newValue="AssignStatusProductNichtVorhanden"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T14:34:10.209+0100">
+    <parentElement elementType="assign" elementName="AssignStatusProductNichtVorhanden" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]"/>
+    <newElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T14:34:10.248+0100">
+    <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]"/>
+    <newElement elementType="from" elementName=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T14:34:10.282+0100">
+    <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]"/>
+    <newElement elementType="to" elementName=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:41.202+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="variable" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:41.203+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="part" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:41.204+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="property" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:41.206+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="part" oldValue="" newValue="checkAvailabilityOutput"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:41.214+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="variable" oldValue="" newValue="CheckVorhandenResponse"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:50.899+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="variable" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:50.900+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="part" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:50.901+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="property" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:50.901+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="part" oldValue="" newValue="payload"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:34:50.904+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="variable" oldValue="" newValue="outputOrder"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:35:59.966+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/to[1]"/>
+    <attribute attributeName="variable" oldValue="outputOrder"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:35:59.972+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/to[1]"/>
+    <attribute attributeName="part" oldValue="payload"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:35:59.975+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/to[1]"/>
+    <attribute attributeName="property" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:35:59.979+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/to[1]"/>
+    <attribute attributeName="part" oldValue="" newValue="payload"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:35:59.982+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/to[1]"/>
+    <attribute attributeName="variable" oldValue="" newValue="outputOrder"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:36:08.491+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="variable" oldValue="CheckVorhandenResponse"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:36:08.502+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="part" oldValue="checkAvailabilityOutput"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:36:08.511+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="property" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:36:08.518+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="part" oldValue="" newValue="checkAvailabilityOutput"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T14:36:08.520+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/assign[1]/copy[1]/from[1]"/>
+    <attribute attributeName="variable" oldValue="" newValue="CheckVorhandenResponse"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementRemoved" timestamp="2016-12-11T14:48:27.312+0100">
+    <parentElement elementType="sequence" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]"/>
+    <oldElement elementType="exit" elementName="Exit" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/exit[1]"/>
+  </modelChange>
 </bplog:Log>

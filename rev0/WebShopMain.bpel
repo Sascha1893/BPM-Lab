@@ -201,7 +201,23 @@
                         <bpel:sequence>
                             
                             
-                            <bpel:throw name="Throw" faultName="tns:ProductNichtVorrätig" faultVariable="CheckVorhandenResponse"></bpel:throw>
+                            
+                            
+                            <bpel:assign validate="no" name="AssignStatusProductNichtVorhanden">
+                                <bpel:copy>
+                                    <bpel:from part="checkAvailabilityOutput" variable="CheckVorhandenResponse">
+                                        <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
+                                            <![CDATA[tns:product/tns:status/tns:currentAvailability]]>
+                                        </bpel:query>
+                                    </bpel:from>
+                                    <bpel:to part="payload" variable="outputOrder">
+                                        <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
+                                            <![CDATA[tns:products/tns:product[1]/tns:productId]]>
+                                        </bpel:query>
+                                    </bpel:to>
+                                </bpel:copy>
+                            </bpel:assign>
+                            <bpel:reply name="replyCustomer" partnerLink="client" operation="process" portType="tns:WebShopMain" variable="outputOrder"></bpel:reply>
                             
                         </bpel:sequence>
                     </bpel:if>
