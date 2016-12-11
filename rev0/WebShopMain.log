@@ -10452,4 +10452,192 @@
     <containingElement elementType="to" elementName=""/>
     <attribute attributeName="variable" oldValue="" newValue="ShipmentServicePartnerRequest"/>
   </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:50:36.002+0100">
+    <parentElement elementType="partnerLinks" elementName="" elementXPath="/process/partnerLinks[1]"/>
+    <newElement elementType="partnerLink" elementName="" elementXPath="/process/partnerLinks[1]/partnerLink[5]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:50:36.002+0100">
+    <containingElement elementType="partnerLink" elementName="" elementXPath="/process/partnerLinks[1]/partnerLink[5]"/>
+    <attribute attributeName="name" oldValue="" newValue="PartnerLink"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:50:42.240+0100">
+    <containingElement elementType="partnerLink" elementName="PartnerLink" elementXPath="/process/partnerLinks[1]/partnerLink[5]"/>
+    <attribute attributeName="name" oldValue="PartnerLink" newValue="PaymentServicePartner"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:51:09.524+0100">
+    <containingElement elementType="partnerLink" elementName="PaymentServicePartner" elementXPath="/process/partnerLinks[1]/partnerLink[5]"/>
+    <attribute attributeName="partnerLinkType" oldValue="" newValue="tns:PaymentServicePartner"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:51:15.184+0100">
+    <containingElement elementType="partnerLink" elementName="PaymentServicePartner" elementXPath="/process/partnerLinks[1]/partnerLink[5]"/>
+    <attribute attributeName="partnerRole" oldValue="" newValue="PaymentProvider"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:51:21.641+0100">
+    <parentElement elementType="sequence" elementName="main" elementXPath="/process/sequence[1]"/>
+    <newElement elementType="assign" elementName="" elementXPath="/process/sequence[1]/assign[7]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:51:21.653+0100">
+    <containingElement elementType="assign" elementName="" elementXPath="/process/sequence[1]/assign[7]"/>
+    <attribute attributeName="name" oldValue="" newValue="Assign1"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:51:43.425+0100">
+    <containingElement elementType="assign" elementName="Assign1" elementXPath="/process/sequence[1]/assign[7]"/>
+    <attribute attributeName="name" oldValue="Assign1" newValue="AssignCalcTransactionCosts"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:51:47.994+0100">
+    <parentElement elementType="sequence" elementName="main" elementXPath="/process/sequence[1]"/>
+    <newElement elementType="invoke" elementName="" elementXPath="/process/sequence[1]/invoke[5]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:51:48.007+0100">
+    <containingElement elementType="invoke" elementName="" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="name" oldValue="" newValue="Invoke"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:51:55.604+0100">
+    <containingElement elementType="invoke" elementName="Invoke" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="name" oldValue="Invoke" newValue="InvokeCalcTransactionCosts"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:00.645+0100">
+    <containingElement elementType="invoke" elementName="InvokeCalcTransactionCosts" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="partnerLink" oldValue="" newValue="InventoryServicePartner"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:00.664+0100">
+    <containingElement elementType="invoke" elementName="InvokeCalcTransactionCosts" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="operation" oldValue="" newValue="checkAvailability"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:00.690+0100">
+    <containingElement elementType="invoke" elementName="InvokeCalcTransactionCosts" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="operation" oldValue="checkAvailability"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:00.697+0100">
+    <containingElement elementType="invoke" elementName="InvokeCalcTransactionCosts" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="portType" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:06.711+0100">
+    <parentElement elementType="variables" elementName="" elementXPath="/process/variables[1]"/>
+    <newElement elementType="variable" elementName="PaymentServicePartnerResponse" elementXPath="/process/variables[1]/variable[13]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:06.722+0100">
+    <parentElement elementType="variables" elementName="" elementXPath="/process/variables[1]"/>
+    <newElement elementType="variable" elementName="PaymentServicePartnerRequest" elementXPath="/process/variables[1]/variable[14]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:06.722+0100">
+    <containingElement elementType="invoke" elementName="InvokeCalcTransactionCosts" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="partnerLink" oldValue="InventoryServicePartner" newValue="PaymentServicePartner"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:06.729+0100">
+    <containingElement elementType="invoke" elementName="InvokeCalcTransactionCosts" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="operation" oldValue="" newValue="calcTransactionCosts"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:06.737+0100">
+    <containingElement elementType="invoke" elementName="InvokeCalcTransactionCosts" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="inputVariable" oldValue="" newValue="PaymentServicePartnerRequest"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:06.748+0100">
+    <containingElement elementType="invoke" elementName="InvokeCalcTransactionCosts" elementXPath="/process/sequence[1]/invoke[5]"/>
+    <attribute attributeName="outputVariable" oldValue="" newValue="PaymentServicePartnerResponse"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:11.986+0100">
+    <parentElement elementType="assign" elementName="AssignCalcTransactionCosts" elementXPath="/process/sequence[1]/assign[7]"/>
+    <newElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:12.027+0100">
+    <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]"/>
+    <newElement elementType="from" elementName=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:12.067+0100">
+    <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]"/>
+    <newElement elementType="to" elementName=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementRemoved" timestamp="2016-12-11T12:52:14.457+0100">
+    <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]"/>
+    <oldElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]/from[1]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:14.457+0100">
+    <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]"/>
+    <newElement elementType="from" elementName=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="LiteralAdded" timestamp="2016-12-11T12:52:14.471+0100">
+    <containingElement elementType="from" elementName=""/>
+    <attribute attributeName="literal" newValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:27.437+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]/to[1]"/>
+    <attribute attributeName="variable" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:27.439+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]/to[1]"/>
+    <attribute attributeName="part" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:27.439+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]/to[1]"/>
+    <attribute attributeName="property" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:27.441+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]/to[1]"/>
+    <attribute attributeName="part" oldValue="" newValue="calcTransactionCostsInput"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:27.446+0100">
+    <containingElement elementType="to" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[1]/to[1]"/>
+    <attribute attributeName="variable" oldValue="" newValue="PaymentServicePartnerRequest"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="LiteralRemoved" timestamp="2016-12-11T12:52:32.780+0100">
+    <containingElement elementType="from" elementName=""/>
+    <attribute attributeName="literal" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="LiteralAdded" timestamp="2016-12-11T12:52:32.780+0100">
+    <containingElement elementType="from" elementName=""/>
+    <attribute attributeName="literal" newValue="&lt;FlowSOG:calcTransactionCosts xmlns:FlowSOG=&quot;http://iaas.uni-stuttgart.de/labs/FlowSOG&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>&#xD;&#xA;  &lt;FlowSOG:orderId>FlowSOG:orderId&lt;/FlowSOG:orderId>&#xD;&#xA;&lt;/FlowSOG:calcTransactionCosts>&#xD;&#xA;"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:37.083+0100">
+    <parentElement elementType="assign" elementName="AssignCalcTransactionCosts" elementXPath="/process/sequence[1]/assign[7]"/>
+    <newElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:37.131+0100">
+    <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]"/>
+    <newElement elementType="from" elementName=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:StructuralChange" changeReason="ElementAdded" timestamp="2016-12-11T12:52:37.144+0100">
+    <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]"/>
+    <newElement elementType="to" elementName=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:49.847+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]/from[1]"/>
+    <attribute attributeName="variable" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:49.848+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]/from[1]"/>
+    <attribute attributeName="part" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:49.849+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]/from[1]"/>
+    <attribute attributeName="property" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:49.850+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]/from[1]"/>
+    <attribute attributeName="part" oldValue="" newValue="storeOrderDetailsOutput"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:49.856+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]/from[1]"/>
+    <attribute attributeName="variable" oldValue="" newValue="StoreOrderResponse"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:51.262+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="variable" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:51.264+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="part" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:51.265+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="property" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:51.266+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="part" oldValue="" newValue="calcTransactionCostsInput"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-11T12:52:51.275+0100">
+    <containingElement elementType="to" elementName=""/>
+    <attribute attributeName="variable" oldValue="" newValue="PaymentServicePartnerRequest"/>
+  </modelChange>
 </bplog:Log>

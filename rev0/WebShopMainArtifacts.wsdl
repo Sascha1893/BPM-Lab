@@ -21,6 +21,9 @@
     <plnk:partnerLinkType name="ShipmentServicePartner">
     <plnk:role name="ShipmentProvider" portType="tns:ShipmentPortType"/>
   </plnk:partnerLinkType>
+    <plnk:partnerLinkType name="PaymentServicePartner">
+    <plnk:role name="PaymentProvider" portType="tns:PaymentPortType"/>
+  </plnk:partnerLinkType>
     <import location="BPMLabServices.wsdl" namespace="http://iaas.uni-stuttgart.de/labs/FlowSOG"/>
     <types>
 
