@@ -67,6 +67,7 @@
 					<element name="paymentDetails" type="tns:paymentDetails" />
 					<element name="shippingAddress" type="string" />
 					<element name="customerID" type="string" />
+					<element name="date" type="date" />
 				</sequence>
 			</complexType>
 
