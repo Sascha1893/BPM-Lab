@@ -14888,4 +14888,84 @@
     <parentElement elementType="copy" elementName="" elementXPath="/process/sequence[1]/assign[1]/copy[2]"/>
     <oldElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[1]/copy[3]/from[1]"/>
   </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="TextChanged" timestamp="2016-12-12T11:47:02.926+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="text" oldValue="concat('Product ',string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:name),' is not available. It will be available again in ', string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:status/tns:availableAgainInDays),' Days')" newValue="concat('Your whole Order has been cancelled, because the Product ',string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:name),' is not available. It will be available again in ', string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:status/tns:availableAgainInDays),' Days')"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T11:47:02.982+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T11:47:02.989+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:06:31.078+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:06:31.632+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="TextChanged" timestamp="2016-12-12T12:07:08.523+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="text" oldValue="concat('Your whole Order has been cancelled, &amp;#xD; because the Product ',string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:name),' is not available. It will be available again in ', string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:status/tns:availableAgainInDays),' Days')" newValue="concat('Your whole Order has been cancelled,' &amp;#xD; 'because the Product ',string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:name),' is not available. It will be available again in ', string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:status/tns:availableAgainInDays),' Days')"/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:07:08.526+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:07:08.530+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:07:38.013+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:07:45.661+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:09:51.613+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:09:51.980+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:09:52.157+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:09:52.309+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:09:52.465+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:09:52.739+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:10:01.031+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:10:01.832+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/forEach[1]/scope[1]/sequence[1]/if[1]/sequence[1]/if[1]/else[1]/sequence[1]/assign[1]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:11:35.731+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
+  <modelChange xsi:type="bplog:ValueChange" changeReason="AttributeChanged" timestamp="2016-12-12T12:11:41.262+0100">
+    <containingElement elementType="from" elementName="" elementXPath="/process/sequence[1]/assign[7]/copy[2]/from[1]"/>
+    <attribute attributeName="expressionLanguage" oldValue=""/>
+  </modelChange>
 </bplog:Log>

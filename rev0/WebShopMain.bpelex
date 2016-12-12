@@ -18,7 +18,7 @@
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481498724158" processName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}WebShopMain" processVersion="9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1481541104311" processName="{http://iaas.uni-stuttgart.de/labs/FlowSOG}WebShopMain" processVersion="4"/>
   </extensions>
   <extensions>
     <extendedObject href="WebShopMain.bpel#//@variables/@children.2"/>

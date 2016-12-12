@@ -262,8 +262,11 @@
                                         
                                         
                                         
-                                        <![CDATA[concat('Product ',string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:name),' is not available. It will be available again in ', string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:status/tns:availableAgainInDays),' Days')]]>
-									</bpel:from>
+                                        
+                                                    
+                                                    <![CDATA[concat('Your whole Order has been cancelled,
+                                                     because the Product ',string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:name),' is not available. It will be available again in ', string($CheckVorhandenResponse.checkAvailabilityOutput/tns:product/tns:status/tns:availableAgainInDays),' Days')]]>
+                                                </bpel:from>
 									<bpel:to part="payload" variable="outputOrder">
 										<bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
                                             <![CDATA[tns:outputOrder]]>
@@ -565,7 +568,9 @@
                     
                     
                     
-                    <![CDATA[concat('Order with ID ', string($StoreOrderResponse.storeOrderDetailsOutput/tns:orderId),' and total costs of ', string($PaymentServicePartnerRequest1.conductPaymentInput/tns:amount), ' is payed and shipped on ', string($ShipmentServicePartnerRequest1.shipProductsInput/tns:date))]]>
+                    <![CDATA[concat('Order with ID ', string($StoreOrderResponse.storeOrderDetailsOutput/tns:orderId),'
+                     and total costs of ', string($PaymentServicePartnerRequest1.conductPaymentInput/tns:amount), 
+                     ' is payed and shipped on ', string($ShipmentServicePartnerRequest1.shipProductsInput/tns:date))]]>
 				</bpel:from>
 				<bpel:to part="payload" variable="outputOrder">
 					<bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[tns:outputOrder]]></bpel:query>
