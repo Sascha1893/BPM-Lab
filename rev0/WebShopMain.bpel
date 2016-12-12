@@ -456,8 +456,15 @@
                     
                     
                     
-                    <![CDATA[sum($OrderServicePartnerResponse.calcOrderCostsOutput/tns:orderCosts | $ShipmentServicePartnerResponse.calcShipmentCostsOutput/tns:shipmentCosts | $PaymentServicePartnerResponse.calcTransactionCostsOutput/tns:transactionCosts)]]>
-				</bpel:from>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <![CDATA[concat(substring-before(sum($OrderServicePartnerResponse.calcOrderCostsOutput/tns:orderCosts | $ShipmentServicePartnerResponse.calcShipmentCostsOutput/tns:shipmentCosts | $PaymentServicePartnerResponse.calcTransactionCostsOutput/tns:transactionCosts), '.'),'.',substring(substring-after(sum($OrderServicePartnerResponse.calcOrderCostsOutput/tns:orderCosts | $ShipmentServicePartnerResponse.calcShipmentCostsOutput/tns:shipmentCosts | $PaymentServicePartnerResponse.calcTransactionCostsOutput/tns:transactionCosts), '.'), 1, 2))]]>
+                </bpel:from>
 				<bpel:to part="conductPaymentInput" variable="PaymentServicePartnerRequest1">
 					<bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0"><![CDATA[tns:amount]]></bpel:query>
 				</bpel:to>
